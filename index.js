@@ -1,6 +1,10 @@
 const express = require('express')
+var mogan = require('morgan') //dung de ghi log
 const app = express()
 const port = 3000;
+
+app.use(mogan('tiny'))
+
 app.get('/', function (req, res) {
     res.send('Hello World')
 })
